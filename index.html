@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malek Kitchen | مطبخ واحد عائلة واحدة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --white: #ffffff;
+            --orange: #ff6600; /* البرتقالي الخاص بك */
+            --light-gray: #f8f8f8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--white); /* الخلفية بيضاء */
+            color: var(--orange); /* الكتابة برتقالية */
+            scroll-behavior: smooth;
+        }
+
+        /* القائمة */
+        nav {
+            background: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+            box-shadow: 0 2px 15px rgba(255, 102, 0, 0.1); /* ظل برتقالي خفيف */
+            border-bottom: 2px solid var(--orange);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--orange); }
+        .logo span { color: #333; } 
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--orange);
+            margin-right: 20px;
+            font-weight: 700;
+        }
+
+        /* الهيرو / الرئيسية */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                        url('https://images.unsplash.com/photo-1556911223-e4520288df80?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 4rem; margin-bottom: 10px; font-weight: 900; }
+        .hero p { font-size: 1.5rem; font-weight: 600; }
+
+        .social-icons {
+            margin-top: 25px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: var(--orange);
+            font-size: 2.5rem;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover { transform: scale(1.2); color: #333; }
+
+        /* المتجر */
+        .shop { padding: 100px 8%; background-color: var(--white); }
+        .shop h2 { text-align: center; margin-bottom: 50px; font-size: 2.5rem; font-weight: bold; border-bottom: 3px solid var(--orange); display: inline-block; padding-bottom: 10px; margin-right: 50%; transform: translateX(50%); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 2px solid var(--orange); /* إطار برتقالي للصور */
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(255, 102, 0, 0.2); }
+
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+
+        .card-content { padding: 20px; text-align: center; }
+        .card-content h3 { color: var(--orange); margin-bottom: 10px; font-size: 1.4rem; }
+        .card-content p { font-size: 1rem; color: #555; } /* الوصف بلون رمادي للراحة البصرية */
+
+        /* زر واتساب العائم */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: #25d366;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        footer {
+            background: var(--light-gray);
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid var(--orange);
+            color: var(--orange);
+        }
+
+        .footer-email { color: var(--orange); font-weight: bold; text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .shop h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MALEK <span>KITCHEN</span></div>
+        <div class="nav-links">
+            <a href="#">الرئيسية</a>
+            <a href="#shop">المتجر</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Malek Kitchen</h1>
+        <p>نصمم لك مطبخاً يجمع بين الفخامة والعملية</p>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/malek_kitchen?igsh=MWtjb3A0YzBoODNzbw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@malek_kitchen?_r=1&_t=ZN-93nwzXqztqM" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61559291513020" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="mailto:malekmalik0550@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/213774060954" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+    <section class="shop" id="shop">
+        <h2>مطبخ واحد عائلة واحدة</h2>
+
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1556912177-f547c126e49a?w=500" alt="مطبخ">
+                <div class="card-content">
+                    <h3>مطبخ عصري مبهج</h3>
+                    <p>استغلال ذكي للمساحات بألوان حيوية تناسب عائلتك.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=500" alt="مطبخ">
+                <div class="card-content">
+                    <h3>الرخام الملكي</h3>
+                    <p>أناقة الرخام الأبيض مع إضاءة ليد حديثة.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1565182999561-18d7dc63c391?w=500" alt="مطبخ">
+                <div class="card-content">
+                    <h3>تصميم الجزيرة</h3>
+                    <p>مساحة واسعة للعمل وتناول الطعام بانسجام تام.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1556185781-a47769abb7ee?w=500" alt="مطبخ">
+                <div class="card-content">
+                    <h3>بساطة التصميم</h3>
+                    <p>لمسة ناعمة تناسب الشقق العصرية والمساحات المفتوحة.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500" alt="مطبخ">
+                <div class="card-content">
+                    <h3>مطابخ دافئة</h3>
+                    <p>خشب طبيعي يعطي شعوراً بالراحة والجمال الكلاسيكي.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599619351208-3e6c839d7824?w=500" alt="مطبخ">
+                <div class="card-content">
+                    <h3>الفخامة الداكنة</h3>
+                    <p>تناسق الألوان الغامقة مع البرتقالي لإطلالة جريئة.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541544537156-7627a7a4aa1c?w=500" alt="مطبخ">
+                <div class="card-content">
+                    <h3>التنظيم الذكي</h3>
+                    <p>أدراج وحلول تخزين تجعل مطبخك دائماً مرتباً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>تواصل معنا: <a href="mailto:malekmalik0550@gmail.com" class="footer-email">malekmalik0550@gmail.com</a></p>
+        <p>جميع الحقوق محفوظة لـ Malek Kitchen © 2026</p>
+    </footer>
+
+    <a href="https://wa.me/213774060954" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
