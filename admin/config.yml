@@ -4,6 +4,7 @@ backend:
 
 media_folder: "images"
 public_folder: "/images"
+site_url: https://maleckkitchen.com
 
 collections:
   - name: "pages"
@@ -13,5 +14,5 @@ collections:
         name: "home"
         file: "index.html"
         fields:
-          - {label: "العنوان", name: "title", widget: "string"}
-          - {label: "المحتوى", name: "body", widget: "markdown"}
+          - { label: "العنوان", name: "title", widget: "string" }
+          - { label: "المحتوى", name: "body", widget: "markdown" }
