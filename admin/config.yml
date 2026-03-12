@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images" # المجلد الذي ستُحفظ فيه صورك
+public_folder: "/images"
+
+site_url: https://maleckkitchen.com
+
+collections:
+  - name: "pages"
+    label: "الصفحات"
+    files:
+      - label: "الصفحة الرئيسية"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "عنوان الصفحة", name: "title", widget: "string" }
+          - { label: "المحتوى الرئيسي", name: "body", widget: "markdown" }
